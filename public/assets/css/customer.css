@@ -1,0 +1,245 @@
+:root{--ink:#17202a;--gold:#b68b42;--cream:#f6f2e9;--line:#e7e1d7}.shop-shell{min-height:70vh}.hero{background:linear-gradient(115deg,rgba(17,27,39,.96),rgba(34,49,65,.78)),url('../images/products/no-image.png') center/cover;min-height:480px;display:grid;place-items:center;color:#fff}.hero-copy{max-width:760px}.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:#d9bd87;font-size:.78rem}.section-title{font-family:'Playfair Display',serif;color:var(--ink)}.category-card,.product-card{background:#fff;border:1px solid var(--line);border-radius:1rem;overflow:hidden;transition:.2s}.category-card:hover,.product-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(22,33,62,.09)}.product-image-wrap{display:block;position:relative;background:#eee;aspect-ratio:4/5;overflow:hidden}.product-image{width:100%;height:100%;object-fit:cover;transition:.35s}.product-card:hover .product-image{transform:scale(1.03)}.sale-badge,.stock-badge{position:absolute;top:.75rem;padding:.35rem .6rem;border-radius:2rem;font-size:.72rem;font-weight:700;color:#fff}.sale-badge{left:.75rem;background:#a23a35}.stock-badge{right:.75rem;background:#4d5358}.product-name{text-decoration:none;color:var(--ink)}.price{color:#9b2c26}.filter-panel{background:#fff;border:1px solid var(--line);border-radius:1rem}.gallery-main{aspect-ratio:4/5;background:#eee;border-radius:1rem;overflow:hidden}.gallery-main img{width:100%;height:100%;object-fit:cover}.gallery-thumb{width:72px;height:88px;object-fit:cover;border:2px solid transparent;border-radius:.6rem;cursor:pointer}.gallery-thumb.active{border-color:var(--gold)}.choice{position:relative}.choice input{position:absolute;opacity:0}.choice label{border:1px solid #ccc;border-radius:.55rem;padding:.55rem .8rem;cursor:pointer;background:#fff}.choice input:checked+label{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}.color-choice label{width:38px;height:38px;border-radius:50%;padding:0}.variant-status{border-radius:.75rem;background:var(--cream);padding:1rem}.footer-link{color:#bbb;text-decoration:none}.footer-link:hover{color:#fff}@media(max-width:991px){.hero{min-height:390px}.filter-panel{margin-bottom:1.5rem}}@media(max-width:575px){.hero{min-height:340px}.hero h1{font-size:2.25rem}.product-image-wrap{aspect-ratio:1/1.2}}
+/* Quick Cart Float Button */
+.btn-quick-cart-float{position:absolute;bottom:.85rem;right:.85rem;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--ink);border:1px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.15);transition:all .2s ease;opacity:1;z-index:2;cursor:pointer}
+.btn-quick-cart-float:hover{background:var(--ink);color:#fff;transform:scale(1.12);box-shadow:0 6px 20px rgba(0,0,0,.22)}
+/* Quick Add Modal Styling */
+.quick-modal-thumb{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:.75rem;background:#eee}
+.quick-modal-swatch{width:34px;height:34px;border-radius:50%;display:inline-block;cursor:pointer;border:2px solid #ddd;transition:all .2s}
+.quick-modal-swatch.active{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink);transform:scale(1.08)}
+.quick-modal-size-btn{min-width:44px;padding:.35rem .75rem;font-size:.85rem;font-weight:600;border:1px solid #ccc;background:#fff;color:var(--ink);border-radius:.5rem;cursor:pointer;transition:all .15s}
+.quick-modal-size-btn:hover{border-color:var(--ink)}
+.quick-modal-size-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.quick-modal-size-btn.disabled,.quick-modal-size-btn:disabled{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+[data-theme="dark"] .btn-quick-cart-float{background:#232d3d;color:#fff}
+[data-theme="dark"] .quick-modal-size-btn{background:#171d27;color:#fff;border-color:#343b46}
+[data-theme="dark"] .quick-modal-size-btn.active{background:var(--accent);border-color:var(--accent);color:#000}
+
+/* Checkout Step Indicator */
+.checkout-steps{display:flex;align-items:center;justify-content:center;margin-bottom:2rem;gap:.5rem}
+.checkout-steps .step{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:.9rem;color:#9ca3af;text-decoration:none}
+.checkout-steps .step-num{width:32px;height:32px;border-radius:50%;background:#e5e7eb;color:#6b7280;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;transition:all .2s}
+.checkout-steps .step.active{color:var(--ink)}
+.checkout-steps .step.active .step-num{background:var(--ink);color:#fff}
+.checkout-steps .step.completed{color:#16a34a}
+.checkout-steps .step.completed .step-num{background:#dcfce7;color:#16a34a}
+.checkout-steps .step-divider{flex:1;max-width:60px;height:2px;background:#e5e7eb;border-radius:2px}
+.checkout-steps .step-divider.completed{background:#16a34a}
+
+/* Payment Method Cards */
+.payment-card-option{border:2px solid #e5e7eb;border-radius:1rem;padding:1.15rem;cursor:pointer;transition:all .2s ease;background:#fff}
+.payment-card-option:hover{border-color:#cbd5e1;background:#f8fafc}
+.payment-card-option.active{border-color:var(--ink);background:#fdfdfd;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.payment-icon-wrap{width:48px;height:48px;border-radius:.75rem;display:flex;align-items:center;justify-content:center;font-size:1.35rem;flex-shrink:0}
+
+/* Checkout Review Items */
+.checkout-item-thumb{width:64px;height:78px;object-fit:cover;border-radius:.6rem;background:#f3f4f6;flex-shrink:0}
+
+/* ==========================================================================
+   ELEGANT HERO BANNER (CLEAN, MODERN & DYNAMIC)
+   ========================================================================== */
+.hero-banner-section {
+    position: relative;
+    overflow: hidden;
+    background: #0b111c;
+}
+
+.hero-banner-item {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1.5rem 5.5rem;
+    overflow: hidden;
+}
+
+/* Subtle cinematic Ken Burns slow-zoom */
+.hero-banner-bg {
+    position: absolute;
+    top: -4%;
+    left: -4%;
+    width: 108%;
+    height: 108%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: heroKenBurns 16s ease-in-out infinite alternate;
+    will-change: transform;
+    z-index: 1;
+}
+
+@keyframes heroKenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    50% { transform: scale(1.04) translate(-0.8%, -0.5%); }
+    100% { transform: scale(1.02) translate(0.6%, 0.4%); }
+}
+
+/* Clean, balanced dark overlay */
+.hero-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(17, 24, 39, 0.42) 0%, rgba(13, 19, 31, 0.78) 75%, rgba(9, 13, 22, 0.92) 100%),
+                linear-gradient(180deg, rgba(11, 17, 28, 0.3) 0%, rgba(11, 17, 28, 0.75) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Content */
+.hero-banner-content {
+    position: relative;
+    z-index: 4;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Minimalist Tag */
+.hero-banner-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e5c583;
+    padding: 0.38rem 1.35rem;
+    border: 1px solid rgba(229, 197, 131, 0.35);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin-bottom: 1.5rem;
+    animation: heroFadeDown 0.7s ease both;
+}
+
+/* Title - Single line on desktop & tablet */
+.hero-banner-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.85rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+    max-width: 100%;
+    margin: 0 auto 1.35rem;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.75);
+    animation: heroFadeUp 0.8s ease 0.15s both;
+}
+
+@media (min-width: 992px) {
+    .hero-banner-title {
+        font-size: 3.1rem;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-banner-title {
+        font-size: 2.35rem;
+        white-space: nowrap;
+    }
+}
+
+/* Subtitle - Symmetrically balanced */
+.hero-banner-subtitle {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0 auto 2.25rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    text-wrap: balance;
+    animation: heroFadeUp 0.8s ease 0.3s both;
+}
+
+/* Actions */
+.hero-banner-actions {
+    display: flex;
+    justify-content: center;
+    animation: heroFadeUp 0.8s ease 0.45s both;
+}
+
+/* "Khám phá bộ sưu tập" Button (Clean, Modern & Premium) */
+.btn-hero-explore {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 2.8rem;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: #0f172a !important;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 0.3px;
+}
+
+.btn-hero-explore:hover {
+    background: #f8fafc;
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.btn-hero-explore .explore-arrow {
+    transition: transform 0.25s ease;
+}
+
+.btn-hero-explore:hover .explore-arrow {
+    transform: translateX(4px);
+}
+
+/* Minimalist Carousel Arrows */
+.hero-carousel-arrow {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.65;
+    transition: all 0.25s ease;
+    z-index: 5;
+}
+
+.hero-carousel-arrow:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+}
+
+/* Entrance Animations */
+@keyframes heroFadeDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-banner-item { min-height: 460px; padding: 4rem 1.25rem 4.5rem; }
+    .hero-banner-title { font-size: 2.65rem; }
+    .hero-banner-subtitle { font-size: 1.05rem; }
+}
+
+@media (max-width: 575px) {
+    .hero-banner-item { min-height: 410px; padding: 3rem 1rem 3.5rem; }
+    .hero-banner-title { font-size: 2rem; }
+    .hero-banner-subtitle { font-size: 0.95rem; margin-bottom: 1.75rem; }
+    .btn-hero-explore { width: 100%; }
+}
+

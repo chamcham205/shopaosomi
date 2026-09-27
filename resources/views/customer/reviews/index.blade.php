@@ -1,0 +1,3 @@
+@extends('layouts.app')
+@section('title','Đánh giá của tôi')
+@section('content')<div class="container shop-shell py-5"><h1 class="section-title mb-4">Đánh giá của tôi</h1>@forelse($reviews as $review)<article class="filter-panel p-4 mb-3"><div class="d-flex justify-content-between"><strong><a href="{{ route('products.show',$review->product->slug) }}">{{ $review->product->name }}</a></strong><span class="badge bg-secondary">{{ $review->status }}</span></div><div class="text-warning my-2">{{ str_repeat('★',$review->rating) }}</div><p class="mb-1">{{ $review->content }}</p><small class="text-muted">{{ $review->created_at->format('d/m/Y') }}</small></article>@empty<p>Bạn chưa có đánh giá.</p>@endforelse {{ $reviews->links() }}</div>@endsection
